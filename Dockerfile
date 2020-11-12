@@ -1,5 +1,5 @@
-FROM balenalib/armv7hf-debian:stretch
-#FROM balenalib/raspberry-pi-debian:stretch
+#FROM balenalib/armv7hf-debian:stretch
+FROM balenalib/raspberry-pi-debian:stretch
 
 #dynamic build arguments coming from the /hooks/build file 
 ARG BUILD_DATE
