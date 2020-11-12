@@ -1,5 +1,5 @@
-FROM balenalib/armv7hf-debian:buster
-#FROM balenalib/raspberry-pi-debian:buster
+FROM balenalib/armv7hf-debian:stretch
+#FROM balenalib/raspberry-pi-debian:stretch
 
 #dynamic build arguments coming from the /hooks/build file 
 ARG BUILD_DATE
@@ -23,7 +23,7 @@ RUN apt-get update && \
     curl
 
 RUN curl http://www.linux-projects.org/listing/uv4l_repo/lrkey.asc | apt-key add -
-RUN echo "deb http://www.linux-projects.org/listing/uv4l_repo/raspbian/ buster main" > /etc/apt/sources.list.d/uv4l-buster.list
+RUN echo "deb http://www.linux-projects.org/listing/uv4l_repo/raspbian/ stretch main" > /etc/apt/sources.list.d/uv4l-stretch.list
 
 RUN apt-get update && \
     apt-get install -y \
