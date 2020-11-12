@@ -39,7 +39,8 @@ RUN echo "running UV4 Installation..." \
     uv4l-mjpegstream \
     fuse
 
-RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/uv4l/ssl/ssl.key -out /etc/u4ul/ssl/ssl.crt
+RUN mkdir -p /etc/uv4l/ssl \
+    && openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/uv4l/ssl/ssl.key -out /etc/u4ul/ssl/ssl.crt
 
 RUN apt-get remove -y \
     curl && \
