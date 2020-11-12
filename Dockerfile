@@ -1,7 +1,7 @@
 #FROM balenalib/armv7hf-debian:buster
 FROM balenalib/raspberry-pi-debian:buster
 
-#dynamic build arguments coming from the /hooks/build file
+#dynamic build arguments coming from the /hooks/build file 
 ARG BUILD_DATE
 ARG VCS_REF
 
