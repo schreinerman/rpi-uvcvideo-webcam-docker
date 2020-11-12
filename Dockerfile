@@ -23,7 +23,7 @@ RUN apt-get update && \
     curl
 
 RUN curl http://www.linux-projects.org/listing/uv4l_repo/lrkey.asc | apt-key add -
-RUN echo "deb http://www.linux-projects.org/listing/uv4l_repo/raspbian/ stretch main" > /etc/apt/sources.list.d/uv4l-stretch.list
+RUN echo "deb http://www.linux-projects.org/listing/uv4l_repo/raspbian/stretch stretch main" > /etc/apt/sources.list.d/uv4l-stretch.list
 
 RUN apt-get update && \
     apt-get install -y \
